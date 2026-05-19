@@ -1,3 +1,10 @@
+def replace_array(numbers):
+    new_list = []
+    for index in range(0, len(numbers)):
+        if numbers[index] < 0:
+            new_list.append(numbers[index])
+    return new_list
+
 def sorted_array(prime):
     unsort = []
     for number in prime:
@@ -8,14 +15,8 @@ def sorted_array(prime):
             if count == 2
                 unsort.append(number)
         
-    return sorted_array(prime)
-def replace_array(numbers):
-    new_list = []
-    for index in range(0, len(numbers)):
-        if numbers[index] < 0:
-            new_list.append(numbers[index])
-    return new_list
-        
+    return sorted_array(prime) 
+           
 def duplicate(numbers):
     duplicates = []
     for index in range(0, len(numbers)):
