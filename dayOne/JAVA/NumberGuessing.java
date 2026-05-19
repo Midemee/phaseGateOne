@@ -14,26 +14,24 @@ public class NumberGuessing{
     choice = input.nextInt();
     
     while (choice < 1 || choice > 100){
-    if (choice < 1 || choice > 100){
-    System.out.println("Enter a valid number!");
+    System.out.print("Enter a valid number! (1-10): ");
+    choice = input.nextInt();
+/*        while(!input.hasNextInt()){
+        System.out.print("Invalid input! Please enter a number(1-10): ");        
+        }*/
     }
-        
-    else if (choice > guess){
+    guesses +=1;
+    
+    
+    if(choice > guess){
         System.out.println("Wrong guess! Too high");
-        guesses += 1;
-    }
+    } 
     else if(choice < guess){
         System.out.println("Wrong guess! Too low");
-        guesses += 1;    
+    }   
+    else if (choice == guess){
+        break;
     }
-    else if(choice == guess){
-    guesses += 1; 
-    System.out.print(choice);
-    break;
-    }
-   
-    }    
-
     }
     
    
@@ -52,7 +50,7 @@ public class NumberGuessing{
     }
     System.out.println(rating);
     
-    System.out.printf("SUMMARY%nCorrect Number: %d%nRating: %s%nTotal Attempts: %d", choice, rating, guesses);
+    System.out.printf("SUMMARY%nCorrect Number: %d%nRating: %s%nTotal Attempts: %d%n", guess, rating, guesses);
     }
 }
 

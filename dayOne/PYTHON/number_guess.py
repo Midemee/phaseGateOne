@@ -7,19 +7,18 @@ choice = 0
 for index in range(1, 6):
     choice = int(input("Enter a number (1-100): "))
     while choice < 1 or choice > 100:
+        choice = int(input("Invalid input! Enter a number (1-10): ") )   
+    guesses += 1
     
-        if choice < 1 or choice > 100:
-            print("Enter a valid number!")
-        elif choice > guess:
-            print("Wrong guess! Too high")
-            guesses += 1
-        elif choice < guess:
-            print("Wrong guess! Too low")
-            guesses += 1
-        elif choice == guess:
-            print("Correct Choice: ", choice)
-            guesses += 1
-            break;
+    if choice > guess:
+        print("Wrong guess! Too high")
+
+    elif choice < guess:
+        print("Wrong guess! Too low")
+
+    elif choice == guess:
+        break;
+            
 rating = ""   
 if guesses == 1:
     rating = "Legendary"
@@ -31,7 +30,7 @@ else:
     rating = "Better Luck"
 print(rating)
 
-print(f"SUMMARY\n Correct Number: {choice}\n Rating: {rating}\n Total Attempts: {guesses}")
+print(f"SUMMARY\n Correct Number: {guess}\n Rating: {rating}\n Total Attempts: {guesses}")
     
          
             
