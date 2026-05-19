@@ -6,4 +6,4 @@ let numberThree = Number(prompt("Enter third number: "));
 
 const average = (numberOne + numberTwo + numberThree) / 3;
 
-console.log("Average", average)
+console.log("Average", average.toFixed(2))
