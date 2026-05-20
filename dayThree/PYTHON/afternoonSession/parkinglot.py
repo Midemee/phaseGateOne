@@ -8,9 +8,10 @@ def get_slots(slots):
         slots[4] = 1
         slots[-1] = 1
         slots[-2] = 1
-        #slots.insert(1, 1)
-        #filled += 1
-        #available -= 1
+        slots[-6] = 0
+        slots[-7] = 0
+        filled += 1
+        available -= 1
 
     return slots
 

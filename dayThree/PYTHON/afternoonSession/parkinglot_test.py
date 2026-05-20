@@ -46,3 +46,15 @@ class parkinglotTest(TestCase):
         expected = parkinglot.get_slots(slots)
         result = [1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0,0,0,1,1]
         self.assertNotEqual(expected, result)
+        
+    def test_that_slot_15_is_now_free(self):
+        slots = [0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0,1,1,1,0,0,0,0,0]
+        expected = parkinglot.get_slots(slots)
+        result = [1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0,0,0,1,1]
+        self.assertNotEqual(expected, result)
+        
+    def test_that_slot_14_is_now_free(self):
+        slots = [0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0,1,1,1,0,0,0,0,0]
+        expected = parkinglot.get_slots(slots)
+        result = [1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0,0,0,1,1]
+        self.assertNotEqual(expected, result)
