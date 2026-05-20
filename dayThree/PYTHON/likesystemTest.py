@@ -15,25 +15,25 @@ class likesystemTest(TestCase):
     
     def test_that_list_remains_empty_if_there_are_no_likes(self):
         likes = []
-        displayText = "no one likes this"
+        text_display = "no one likes this"
         expected = likesystem.getLikes(likes)
-        self.assertEqual(actual, displayText)
+        self.assertEqual(expected, text_display)
         
     def test_that_list_returns_one_like_if_One_liked(self):    
         expected = likesystem.getLikes(["Mide"])
-        displayText = "Mide likes this"
-        self.assertEqual(expected, displayText)
+        text_display = "Mide likes this"
+        self.assertEqual(expected, text_display)
 
     def test_that_list_returns_two_likes_if_One_liked(self):
         expected = likesystem.getLikes(["Mide", "Tobi"])
-        displayText = "Mide and Tobi likes this"
-        self.assertEqual(expected, displayText)
+        text_display = "Mide and Tobi likes this"
+        self.assertEqual(expected, text_display)
 
     def test_that_list_returns_three_likes_if_One_liked(self):
-        likes = ["mide"]
-        expected = ["mide"]
-        actual = likesystem.getLikes(likes)
-        self.assertEqual(actual, expected)
+        likes = ["Mide", "Tobi", "Bola"]
+        text_display = "Mide Tobi and Bola likes this"
+        expected = likesystem.getLikes(likes)
+        self.assertEqual(expected, text_display)
 
     
 
