@@ -27,3 +27,4 @@ def duplicate(numbers):
     
 print(replace_array([5, -9, 3, -6, 2, -11]))    
 print(duplicate([45, 60, 3, 0, 67, 2, 45, 3, 22, 0]))
+print(sorted_array([5, 9, 3, 6, 2]))

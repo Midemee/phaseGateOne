@@ -1,0 +1,46 @@
+'''PSEUDOCODE
+create the text, showing number of likes
+a function that that take an array containing the name of people that like an item
+if array is empty = no one likes this
+else 1person - display name
+else if 2 people - display the 2 names
+else if 3 people - disply the 3 names
+else - display only 2 names and others like this'''
+
+
+from unittest import TestCase
+import likesystem
+
+class likesystemTest(TestCase):
+    
+    def test_that_list_remains_empty_if_there_are_no_likes(self):
+        likes = []
+        text_display = "no one likes this"
+        expected = likesystem.getLikes(likes)
+        self.assertEqual(expected, text_display)
+        
+    def test_that_list_returns_one_like_if_One_liked(self):    
+        expected = likesystem.getLikes(["Mide"])
+        text_display = "Mide likes this"
+        self.assertEqual(expected, text_display)
+
+    def test_that_list_returns_two_likes_if_One_liked(self):
+        expected = likesystem.getLikes(["Mide", "Tobi"])
+        text_display = "Mide and Tobi likes this"
+        self.assertEqual(expected, text_display)
+
+    def test_that_list_returns_three_likes_if_One_liked(self):
+        likes = ["Mide", "Tobi", "Bola"]
+        text_display = "Mide Tobi and one other likes this"
+        expected = likesystem.getLikes(likes)
+        self.assertEqual(expected, text_display)
+        
+    def test_that_list_returns_two_likes_and_others_if_more_than_three_people_liked_it(self):
+        likes = ["Mide", "Tobi", "Bola", "Bolu", "Tayo", "Peace", "Kola", "Ebuka", "Sharon", "Peace", "David", "Edmond"]
+        text_display = f"Mide Tobi and {len(likes)-2} likes this"
+        expected = likesystem.getLikes(likes)
+        self.assertEqual(expected, text_display)
+
+    
+
+    

@@ -19,7 +19,7 @@ public class Number{
     public static int [] removeDuplicates(int[] numbers){
 
         for(int index = 0; index < numbers.length; index++){
-            for(int inner = index + 1; inner < numbers.length; index++){
+            for(int inner = index + 1; inner < numbers.length; inner++){
                 if (numbers[index] == numbers[inner]){
                     numbers[inner] = -1;
                 }
@@ -31,7 +31,7 @@ public class Number{
         for(int index = 0; index < numbers.length; index++){
             if(numbers[index] != -1){
             count++;
-              //sorted[count] += numbers[index];
+
             }
         }
         
@@ -51,7 +51,6 @@ public class Number{
         int largest = sort[0];
         int smallest = sort[0];
         
-        int count = 0;
         for (int index = 0; index < sort.length; index++){
             if (sort[index] > largest){
                 largest = sort[index];
@@ -59,16 +58,16 @@ public class Number{
             if (sort[index] < smallest){
                 smallest = sort[index];
             }
-            count++;
+
         }
         
-/*        int counting = 0;
+        int count = 0;
         for(int index = smallest; index <= largest; index++){
-        counting++;
-        }*/
+        count++;
+        }
         
-        int counting = (largest - smallest) + 1;
-        int [] ascend = new int[counting]; 
+        //int counting = (largest - smallest) + 1;
+        int [] ascend = new int[count]; 
         int counter = 0;
         for(int index = smallest; index <= largest; index++){
             ascend[counter] += index;
@@ -77,10 +76,10 @@ public class Number{
         return ascend;
     }
 
-    public static String [] wordSort(String [] words){
+/*    public static String [] wordSort(String [] words){
             
         String [] vowel = new String[words.length];
-        String [] consonant = new String[];
+        String [] consonant = new String[words.length];
         int vowelCount = 0;        
         int consonantCount = 0;
         for(int index2 = 0; index2 < words.length(); index2++){
@@ -94,9 +93,10 @@ public class Number{
         }
 
         }
-/*        System.out.println("Vowels count:" + vowelCount);
-        System.out.println("Consonant count:" + consonantCount);*/
+        System.out.println("Vowels count:" + vowelCount);
+        System.out.println("Consonant count:" + consonantCount);
+        return vowel;
     
-    }
-    return vowel;
+    }*/
+
 }

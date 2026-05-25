@@ -61,9 +61,17 @@ public class NumberTest{
     } 
     
     @Test
-    public void testThatWordReturnsVowelsSortedInAnArray(){
+    public void testThatAnArrayReturnsAListOfVowelsOnly(){
     String [] text = {"pie", "fly", "pat"};
     String expectedVowel = {"pie", "pat"};
+    String [] actual = Number.wordSort(text);
+    assertArrayEquals(expectedVowel, actual);
+    }
+    
+    @Test
+    public void testThatAnArrayReturnsAListOfConsonantsOnly(){
+    String [] text = {"pie", "fly", "pat"};
+    String expectedVowel = {"fly"};
     String [] actual = Number.wordSort(text);
     assertArrayEquals(expectedVowel, actual);
     }

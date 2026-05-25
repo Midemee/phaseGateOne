@@ -58,3 +58,4 @@ class parkinglotTest(TestCase):
         expected = parkinglot.get_slots(slots)
         result = [1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0,0,0,1,1]
         self.assertNotEqual(expected, result)
+        
